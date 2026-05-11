@@ -3,6 +3,7 @@ import FeatureCard from "./components/FeatureCard"
 import Dashboard from "./components/Dashboard"
 import Stats from "./components/Stats"
 import { motion } from "framer-motion"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
         <Dashboard />
 
       </motion.div>
+      <Footer />
 
     </div>
   )

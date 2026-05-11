@@ -110,19 +110,19 @@ function Dashboard() {
             Today's Tasks
           </h1>
 
-          <div className="flex gap-4 mt-8">
+          <div className="flex flex-col md:flex-row gap-4 mt-8">
 
             <input
               type="text"
               placeholder="Add a new task..."
               value={newTask}
               onChange={(e) => setNewTask(e.target.value)}
-              className="flex-1 bg-black p-4 rounded-2xl outline-none"
+              className="w-full flex-1 bg-black p-4 rounded-2xl outline-none"
             />
 
             <button
               onClick={addTask}
-              className="bg-white text-black px-6 rounded-2xl font-semibold"
+              className="bg-white text-black px-6 py-4 rounded-2xl font-semibold"
             >
               Add
             </button>
@@ -134,7 +134,7 @@ function Dashboard() {
             {tasks.map((task) => (
               <div
                 key={task.id}
-                className="bg-black p-5 rounded-2xl flex justify-between items-center"
+                className="bg-black p-5 rounded-2xl flex flex-col md:flex-row gap-4 md:items-center justify-between"
               >
 
                 <div>
@@ -153,18 +153,18 @@ function Dashboard() {
                   </p>
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 w-full md:w-auto">
 
                   <button
                     onClick={() => toggleTask(task.id)}
-                    className="bg-white text-black px-4 py-2 rounded-xl"
+                    className="bg-white text-black px-4 py-2 rounded-xl flex-1 md:flex-none"
                   >
                     {task.completed ? "Completed" : "Done"}
                   </button>
 
                   <button
                     onClick={() => deleteTask(task.id)}
-                    className="bg-red-500 px-4 py-2 rounded-xl"
+                    className="bg-red-500 px-4 py-2 rounded-xl flex-1 md:flex-none"
                   >
                     Delete
                   </button>
