@@ -1,7 +1,12 @@
+import { motion } from "framer-motion"
+
 function FeatureCard({ title, desc }) {
   return (
-    <div className="bg-zinc-900 p-6 rounded-3xl hover:scale-105 transition duration-300">
-      
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="bg-zinc-900 p-6 rounded-3xl"
+    >
+
       <h2 className="text-2xl font-bold">
         {title}
       </h2>
@@ -10,7 +15,7 @@ function FeatureCard({ title, desc }) {
         {desc}
       </p>
 
-    </div>
+    </motion.div>
   )
 }
 
